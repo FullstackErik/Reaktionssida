@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Work sans", 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: dimgray;
+}
+
+header {
+    width: 100vw;
+    height: 8vh;
+    background-color: white;
+}
+
+.gameWindow {
+    background-color: pink;
+    height: 60vh;
+    width: 100vw;
+    text-align: center;
+    padding: 2rem;
+}
+
+.gameStarted {
+    background-color: green;
+    height: 60vh;
+    width: 100vw;
+    text-align: center;
+    padding: 2rem;
+}
