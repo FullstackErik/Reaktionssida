@@ -15,7 +15,7 @@ header {
     background-color: white;
 }
 
-.gameWindow {
+.gameContainer {
     background-color: pink;
     height: 60vh;
     width: 100vw;
@@ -29,4 +29,5 @@ header {
     width: 100vw;
     text-align: center;
     padding: 2rem;
+    display: none;
 }

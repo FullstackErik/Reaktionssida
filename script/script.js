@@ -2,35 +2,32 @@ document.addEventListener("DOMContentLoaded", function () {
   //var för spelruta
   const gameWindow = document.querySelector(".gameWindow");
 
-  const gameWindowEnd = document.querySelector(".gameStarted");
-
-  //var för h1
-  const headerText = document.querySelector("h1");
+  const gameWindowActive = document.querySelector(".gameStarted");
 
   //var för timer
   let timer = Date.now();
 
   //click för att starta spelet
-  const gameStart = gameWindow.addEventListener("click", function () {
+  const gameStart = gameWindow.addEventListener("click", function() {
     console.log("Spelet startas!");
 
-    gameWindow.style.backgroundColor = "green";
-    gameWindow.className = "gameStarted";
+    gameWindow.style.display = "none";
 
-    //gömmer texten under spelet
-    headerText.style.display = "none";
+    //visar nya diven när spelet startas
+    gameWindowActive.style.display = "block";
+
 
     timer;
-    // setInterval(function() {
-    //     if (timer) {
-    //         const currentTime = Date.now();
-    //         const elapsedTime = ((currentTime - startTime) / 1000).toFixed(3);
-    //         headerText.innerHTML = `Reaktionstid: ${elapsedTime}.`
-    //     }
-    // });
+    setInterval(function() {
+        if (timer) {
+            const currentTime = Date.now();
+            const elapsedTime = ((currentTime - startTime) / 1000).toFixed(3);
+            headerText.innerHTML = `Reaktionstid: ${elapsedTime}.`
+        }
+    });
   });
-  //gameWindowEnd finns inte när DOMen laddas och ger därför error
-  const gameEnd = gameWindowEnd.addEventListener("click", function () {
+
+  const gameEnd = gameWindowActive.addEventListener("click", function() {
     console.log("Spelet är klart!");
   });
 });
